@@ -1,32 +1,30 @@
 # Desafio 7 - Escola DNC
 
-### Descrição
+Este projeto foi desenvolvido para a resolução do **Desafio 7** do curso **Formação de Tecnologia - Desenvolvedor Full-Stack** da escola DNC.
 
-Projeto desenvolvido para a resolução do desafio 7 do curso formação de Tecnologia - Desenvolvedor Full-Stack da escola DNC.
+## Instalação
 
-### Instalação
+### 1. Clone o Repositório
 
-##### Clone o repositório:
-
-```
+```bash
 $ git clone https://github.com/MattMori/Desafio-7---DNC.git
 ```
 
-##### Acesse a pasta criada:
+### 2. Acesse a Pasta Criada
 
-```
+```bash
 $ cd Desafio-7---DNC
 ```
 
-##### Instale as dependências:
+### 3. Instale as Dependências
 
-```
+```bash
 $ npm install
 ```
 
----
+### 4. Criação do Banco de Dados MySQL
 
-##### Caso queira criar o banco de dados MySQL:
+Caso queira criar o banco de dados MySQL manualmente, execute o seguinte comando:
 
 ```mysql
 CREATE TABLE `aluno` (
@@ -42,7 +40,9 @@ AUTO_INCREMENT=5
 ;
 ```
 
-##### Configure o banco de dados no ficheiro knex.ts (src/config/knex.ts):
+### 5. Configuração do Banco de Dados no Arquivo `knex.ts`
+
+Edite o arquivo `src/config/knex.ts` com os dados do seu banco de dados:
 
 ```javascript
 const knexConfig: KnexConfig = {
@@ -50,25 +50,23 @@ const knexConfig: KnexConfig = {
   connection: {
     host: 'localhost',
     port: 3306,
-    user: 'user',
-    password: 'password',
-    database: 'db',
+    user: 'user',        // Altere para seu usuário do MySQL
+    password: 'password', // Altere para sua senha do MySQL
+    database: 'db',       // Altere para o nome do seu banco de dados
   },
 }
 ```
 
----
+## Testes
 
-### Testes
-
-#### Iniciando o teste:
-
-```
+### 1. Iniciar os Testes
+Para rodar os testes, execute o comando abaixo:
+```bash
 $ npm test --config=jest.config.ts
 ```
 
-#### Teste Realizado:
+### 2. Testes Realizados
+![Teste realizado](teste.jpg)
 
-![image](teste.jpg)
-
----
+## Contribuição
+Contribuições são bem-vindas! Caso tenha sugestões de melhorias ou encontre algum problema, sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**.
